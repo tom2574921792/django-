@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.STYLE1 {font-size: 12px}
+.STYLE3 {font-size: 12px; font-weight: bold; }
+.STYLE4 {
+	color: #03515d;
+	font-size: 12px;
+}
+-->
+</style>
+
+<script>
+var  highlightcolor='#c1ebff';
+//此处clickcolor只能用win系统颜色代码才能成功,如果用#xxxxxx的代码就不行,还没搞清楚为什么:(
+var  clickcolor='#51b2f6';
+function  changeto(){
+source=event.srcElement;
+if  (source.tagName=="TR"||source.tagName=="TABLE")
+return;
+while(source.tagName!="TD")
+source=source.parentElement;
+source=source.parentElement;
+cs  =  source.children;
+//alert(cs.length);
+if  (cs[1].style.backgroundColor!=highlightcolor&&source.id!="nc"&&cs[1].style.backgroundColor!=clickcolor)
+for(i=0;i<cs.length;i++){
+	cs[i].style.backgroundColor=highlightcolor;
+}
+}
+
+function  changeback(){
+if  (event.fromElement.contains(event.toElement)||source.contains(event.toElement)||source.id=="nc")
+return
+if  (event.toElement!=source&&cs[1].style.backgroundColor!=clickcolor)
+//source.style.backgroundColor=originalcolor
+for(i=0;i<cs.length;i++){
+	cs[i].style.backgroundColor="";
+}
+}
+
+function  clickto(){
+source=event.srcElement;
+if  (source.tagName=="TR"||source.tagName=="TABLE")
+return;
+while(source.tagName!="TD")
+source=source.parentElement;
+source=source.parentElement;
+cs  =  source.children;
+//alert(cs.length);
+if  (cs[1].style.backgroundColor!=clickcolor&&source.id!="nc")
+for(i=0;i<cs.length;i++){
+	cs[i].style.backgroundColor=clickcolor;
+}
+else
+for(i=0;i<cs.length;i++){
+	cs[i].style.backgroundColor="";
+}
+}
+</script>
+
+</head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="30" background="../../static/tab/images/tab_05.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="12" height="30"><img src="../../static/tab/images/tab_03.gif" width="12" height="30" /></td>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="46%" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="5%"><div align="center"><img src="../../static/tab/images/tb.gif" width="16" height="16" /></div></td>
+                <td width="95%" class="STYLE1"><span class="STYLE3">你当前的位置</span>：[后台管理系统]-[后台首页]</td>
+              </tr>
+            </table></td>
+            <td width="54%">&nbsp;</td>
+          </tr>
+        </table></td>
+        <td width="16"><img src="../../static/tab/images/tab_07.gif" width="16" height="30" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="8" background="../../static/tab/images/tab_12.gif">&nbsp;</td>
+        <td height="300" valign="top">
+
+            {{ cuowu|safe }}
+
+系统功能：<br>
+<pre>
+主要模块包括以下几点：
+
+用户注册：填写手机账号和密码，注册新用户
+登录功能：注册普通账号登录；登录后可以修改用户的基本信息，也可以退出。
+关于我们：学校简介、关于我们、联系我们、加入我们、法律声明、学校详情
+轮播广告：后台设置首页轮播广告图，可以连接到广告页面。
+留言反馈：用户填写李哭咽的主题、联系人、电话、邮箱、留言内容；后台管理可以查看留言列表，可以删除留言。
+
+校园风光列表：显示所有校园风光，可以点击左侧校园风光分类筛选
+校园风光信息：游客和用户都可以进行查看校园风光信息。
+校园风光收藏：查看到有兴趣的校园风光，注册登录的用户可以进行收藏操作。
+校园风光评论：查看到有兴趣的校园风光，登录的用户，可以发表评论；后台审核后显示
+
+分院介绍：列出学校所有分院、可以点击查看详情查看
+分院选修课：按分院列出安排的课程表
+选修课报名：选修课课程表，自动判断是否和当前学员必修课是否冲突
+
+老师中心：列出学校所有老师，尅点击查看详情了解老师信息
+学校课程：列出学校所开设所有课程，点击课程详情可以查看课程
+班级信息：列出学校开设的所有班级信息，可以点击查看班级信息了解班级信息
+班级排课：每个班级信息右侧，可以点击最终课程表，查看排课信息
+
+资讯列表：显示所有资讯，可以点击左侧资讯分类筛选
+资讯阅读：游客和用户都可以进行资讯的阅读。
+资讯收藏：阅读到有兴趣的资讯，注册登录的用户可以进行收藏操作。
+资讯评论：阅读资讯的时候，登录的用户，可以发表评论；后台审核后显示。
+
+我的班级信息：新生报到的班级信息，里面有相关联系方式，地址等
+我的必修课-课程表：新生报到所在班级的课程表，根据课程表上课
+我的选修课-课表：自己选修的课程的课程表
+学籍和宿舍信息：老师录入和安排的学籍和宿舍信息，个人信息可以在用户信息修改
+
+</pre>
+
+        
+        
+        </td>
+        <td width="8" background="../../static/tab/images/tab_15.gif">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="35" background="../../static/tab/images/tab_19.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="12" height="35"><img src="../../static/tab/images/tab_18.gif" width="12" height="35" /></td>
+        <td></td>
+        <td width="16"><img src="../../static/tab/images/tab_20.gif" width="16" height="35" /></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,342 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.STYLE1 {font-size: 12px}
+.STYLE3 {font-size: 12px; font-weight: bold; }
+.STYLE4 {
+	color: #03515d;
+	font-size: 12px;
+}
+-->
+</style>
+
+    <script src="/static/kindeditor-all.js"></script>
+    <script src="/static/lang/zh-CN.js"></script>
+    <script src="/static/themes/default/default.js"></script>
+
+    <script>
+        KindEditor.ready(function (k) {
+            window.editor = k.create('#xinxi_neirong',{
+                resizeType:1,
+                allowPreviewEmoticons : false,
+                allowImageRemote : false,
+                uploadJson : '/upload_image',
+
+            });
+        })
+    </script>
+</head>
+
+<body>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="30" background="../../static/tab/images/tab_05.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="12" height="30"><img src="../../static/tab/images/tab_03.gif" width="12" height="30" /></td>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="46%" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="5%"><div align="center"><img src="../../static/tab/images/tb.gif" width="16" height="16" /></div></td>
+                <td width="95%" class="STYLE1"><span class="STYLE3">你当前的位置</span>：[分院 选修课 排课]</td>
+              </tr>
+            </table></td>
+            <td width="54%">&nbsp;</td>
+          </tr>
+        </table></td>
+        <td width="16"><img src="../../static/tab/images/tab_07.gif" width="16" height="30" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="8" background="../../static/tab/images/tab_12.gif">&nbsp;</td>
+        <td height="300" valign="top">
+
+
+
+
+
+
+
+<form method="post" name="form1" action="">
+<table width="100%" border="0" cellspacing="1" cellpadding="5"  bgcolor="#CCCCCC">
+  <tr>
+    <td bgcolor="#FFFFFF"  width="15%">&nbsp;</td>
+    <td bgcolor="#FFFFFF"  width="15%" align="center">星期一</td>
+    <td bgcolor="#FFFFFF"  width="15%" align="center">星期二</td>
+    <td bgcolor="#FFFFFF"  width="15%" align="center">星期三</td>
+    <td bgcolor="#FFFFFF"  width="15%" align="center">星期四</td>
+    <td bgcolor="#FFFFFF"  width="15%" align="center">星期五</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF" align="center">第一节课</td>
+    <td bgcolor="#FFFFFF">
+
+<script>
+function select_Dialog(xuhao){
+    var height = 125;  
+	var width = 500;  
+	var url = "paike_1_kecheng_xuanze?xuhao=" + xuhao;  
+	var winOption = "height=" + height + ",width=" + width + ",top=500,left=500,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,fullscreen=0";  
+	window.open(url, window, winOption);  
+
+}
+function qingchu(xuhao){
+     document.getElementById("id" + xuhao).value="";
+	 document.getElementById("kc" + xuhao).value="";
+}
+</script>
+
+<input type="text" name="id1" id="id1" value="{{ kcids.0 }}" />
+<input type="text" name="kc1" id="kc1" value="{{ kcmcs.0 }}" />
+<input type="button" onclick="select_Dialog(1);" value="选择" />
+<input type="button" onclick="qingchu(1);" value="清除" />
+
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id7" id="id7" value="{{ kcids.6 }}" />
+<input type="text" name="kc7" id="kc7" value="{{ kcmcs.6 }}" />
+<input type="button" onclick="select_Dialog(7);" value="选择" />  
+<input type="button" onclick="qingchu(7);" value="清除" />
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id13" id="id13" value="{{ kcids.12 }}" />
+<input type="text" name="kc13" id="kc13" value="{{ kcmcs.12 }}" />
+<input type="button" onclick="select_Dialog(13);" value="选择" /> 
+<input type="button" onclick="qingchu(13);" value="清除" />
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id19" id="id19" value="{{ kcids.18 }}" />
+<input type="text" name="kc19" id="kc19" value="{{ kcmcs.18 }}" />
+<input type="button" onclick="select_Dialog(19);" value="选择" />     
+<input type="button" onclick="qingchu(19);" value="清除" />
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id25" id="id25" value="{{ kcids.24 }}" />
+<input type="text" name="kc25" id="kc25" value="{{ kcmcs.24 }}" />
+<input type="button" onclick="select_Dialog(25);" value="选择" />   
+<input type="button" onclick="qingchu(25);" value="清除" />
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF" align="center">第二节课</td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id2" id="id2" value="{{ kcids.1 }}" />
+<input type="text" name="kc2" id="kc2" value="{{ kcmcs.1 }}" />
+<input name="selbtn1" type="button" id="selbtn1" onclick="select_Dialog(2);" value="选择" />
+<input type="button" onclick="qingchu(2);" value="清除" />
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id8" id="id8"  value="{{ kcids.7 }}" />
+<input type="text" name="kc8" id="kc8" value="{{ kcmcs.7 }}" />
+<input type="button" onclick="select_Dialog(8);" value="选择" />  
+<input type="button" onclick="qingchu(8);" value="清除" />
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id14" id="id14" value="{{ kcids.13 }}" />
+<input type="text" name="kc14" id="kc14" value="{{ kcmcs.13 }}" />
+<input type="button" onclick="select_Dialog(14);" value="选择" />  
+<input type="button" onclick="qingchu(14);" value="清除" />   
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id20" id="id20" value="{{ kcids.19 }}" />
+<input type="text" name="kc20" id="kc20" value="{{ kcmcs.19 }}" />
+<input type="button" onclick="select_Dialog(20);" value="选择" />
+<input type="button" onclick="qingchu(20);" value="清除" />
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id26" id="id26" value="{{ kcids.25 }}" />
+<input type="text" name="kc26" id="kc26" value="{{ kcmcs.25 }}" />
+<input type="button" onclick="select_Dialog(26);" value="选择" /> 
+<input type="button" onclick="qingchu(26);" value="清除" />
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF" align="center">第三节课</td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id3" id="id3" value="{{ kcids.2 }}" />
+<input type="text" name="kc3" id="kc3" value="{{ kcmcs.2 }}" />
+<input type="button" onclick="select_Dialog(3);" value="选择" />
+<input type="button" onclick="qingchu(3);" value="清除" />
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id9" id="id9" value="{{ kcids.8 }}" />
+<input type="text" name="kc9" id="kc9" value="{{ kcmcs.8 }}" />
+<input type="button" onclick="select_Dialog(9);" value="选择" />   
+<input type="button" onclick="qingchu(9);" value="清除" />   
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id15" id="id15" value="{{ kcids.14 }}" />
+<input type="text" name="kc15" id="kc15" value="{{ kcmcs.14 }}" />
+<input type="button" onclick="select_Dialog(15);" value="选择" /> 
+<input type="button" onclick="qingchu(15);" value="清除" />
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id21" id="id21" value="{{ kcids.20 }}" />
+<input type="text" name="kc21" id="kc21" value="{{ kcmcs.20 }}" />
+<input type="button" onclick="select_Dialog(21);" value="选择" />
+<input type="button" onclick="qingchu(21);" value="清除" />
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id27" id="id27" value="{{ kcids.26 }}" />
+<input type="text" name="kc27" id="kc27" value="{{ kcmcs.26 }}" />
+<input type="button" onclick="select_Dialog(27);" value="选择" /> 
+<input type="button" onclick="qingchu(27);" value="清除" />
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF" align="center">第四节课</td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id4" id="id4" value="{{ kcids.3 }}" />
+<input type="text" name="kc4" id="kc4" value="{{ kcmcs.3 }}" />
+<input type="button" onclick="select_Dialog(4);" value="选择" />    
+<input type="button" onclick="qingchu(4);" value="清除" />
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id10" id="id10" value="{{ kcids.9 }}" />
+<input type="text" name="kc10" id="kc10" value="{{ kcmcs.9 }}" />
+<input type="button" onclick="select_Dialog(10);" value="选择" />  
+<input type="button" onclick="qingchu(10);" value="清除" />
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id16" id="id16" value="{{ kcids.15 }}" />
+<input type="text" name="kc16" id="kc16" value="{{ kcmcs.15 }}" />
+<input type="button" onclick="select_Dialog(16);" value="选择" /> 
+<input type="button" onclick="qingchu(16);" value="清除" />
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id22" id="id22" value="{{ kcids.21 }}" />
+<input type="text" name="kc22" id="kc22" value="{{ kcmcs.21 }}" />
+<input type="button" onclick="select_Dialog(22);" value="选择" />    
+<input type="button" onclick="qingchu(22);" value="清除" />
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id28" id="id28" value="{{ kcids.27 }}" />
+<input type="text" name="kc28" id="kc28" value="{{ kcmcs.27 }}" />
+<input type="button" onclick="select_Dialog(28);" value="选择" /> 
+<input type="button" onclick="qingchu(28);" value="清除" />
+    </td>
+  </tr>
+  <tr>
+    <td colspan="6"  height="10" bgcolor="#F3F3F3"></td>
+    </tr>
+  <tr>
+    <td bgcolor="#FFFFFF" align="center">第五节课</td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id5" id="id5" value="{{ kcids.4 }}" />
+<input type="text" name="kc5" id="kc5" value="{{ kcmcs.4 }}" />
+<input type="button" onclick="select_Dialog(5);" value="选择" />  
+<input type="button" onclick="qingchu(5);" value="清除" />
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id11" id="id11" value="{{ kcids.10 }}" />
+<input type="text" name="kc11" id="kc11" value="{{ kcmcs.10 }}" />
+<input type="button" onclick="select_Dialog(11);" value="选择" /> 
+<input type="button" onclick="qingchu(11);" value="清除" />
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id17" id="id17" value="{{ kcids.16 }}" />
+<input type="text" name="kc17" id="kc17" value="{{ kcmcs.16 }}" />
+<input type="button" onclick="select_Dialog(17);" value="选择" />
+<input type="button" onclick="qingchu(17);" value="清除" />    
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id23" id="id23" value="{{ kcids.22 }}" />
+<input type="text" name="kc23" id="kc23" value="{{ kcmcs.22 }}" />
+<input type="button" onclick="select_Dialog(23);" value="选择" /> 
+<input type="button" onclick="qingchu(23);" value="清除" />
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id29" id="id29" value="{{ kcids.29 }}" />
+<input type="text" name="kc29" id="kc29" value="{{ kcmcs.29 }}" />
+<input type="button" onclick="select_Dialog(29);" value="选择" /> 
+<input type="button" onclick="qingchu(29);" value="清除" />
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF" align="center">第六节课</td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id6" id="id6" value="{{ kcids.5 }}" />
+<input type="text" name="kc6" id="kc6" value="{{ kcmcs.5 }}" />
+<input type="button" onclick="select_Dialog(6);" value="选择" />   
+<input type="button" onclick="qingchu(6);" value="清除" />   
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id12" id="id12" value="{{ kcids.11 }}" />
+<input type="text" name="kc12" id="kc12" value="{{ kcmcs.11 }}" />
+<input type="button" onclick="select_Dialog(12);" value="选择" /> 
+<input type="button" onclick="qingchu(12);" value="清除" />
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id18" id="id18" value="{{ kcids.17 }}" />
+<input type="text" name="kc18" id="kc18" value="{{ kcmcs.17 }}" />
+<input type="button" onclick="select_Dialog(18);" value="选择" />    
+<input type="button" onclick="qingchu(18);" value="清除" /> 
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id24" id="id24" value="{{ kcids.23 }}" />
+<input type="text" name="kc24" id="kc24" value="{{ kcmcs.23 }}" />
+<input type="button" onclick="select_Dialog(24);" value="选择" />  
+<input type="button" onclick="qingchu(24);" value="清除" />   
+    </td>
+    <td bgcolor="#FFFFFF">
+<input type="text" name="id30" id="id30" value="{{ kcids.29 }}" />
+<input type="text" name="kc30" id="kc30" value="{{ kcmcs.29 }}" />
+<input type="button" onclick="select_Dialog(30);" value="选择" /> 
+<input type="button" onclick="qingchu(30);" value="清除" />
+    </td>
+  </tr>
+  
+<tr>
+	<td colspan="6"  align="center"  bgcolor="#F9F9F9">
+
+    <input type="hidden" name="id" value="{{ id }}" />
+    <input type="hidden" name="dijiye" value="{{ dijiye }}" />
+
+    <input type="submit" value="保存课程表" />
+    
+
+    </td>
+</tr>  
+</table>
+</form>
+
+
+
+
+
+
+
+        
+        
+        </td>
+        <td width="8" background="../../static/tab/images/tab_15.gif">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="35" background="../../static/tab/images/tab_19.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="12" height="35"><img src="../../static/tab/images/tab_18.gif" width="12" height="35" /></td>
+        <td></td>
+        <td width="16"><img src="../../static/tab/images/tab_20.gif" width="16" height="35" /></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

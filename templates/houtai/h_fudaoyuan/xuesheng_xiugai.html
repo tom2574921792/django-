@@ -1,0 +1,218 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.STYLE1 {font-size: 12px}
+.STYLE3 {font-size: 12px; font-weight: bold; }
+.STYLE4 {
+	color: #03515d;
+	font-size: 12px;
+}
+-->
+</style>
+
+    <script src="/static/kindeditor-all.js"></script>
+    <script src="/static/lang/zh-CN.js"></script>
+    <script src="/static/themes/default/default.js"></script>
+
+    <script>
+        KindEditor.ready(function (k) {
+            window.editor = k.create('#xinxi_neirong',{
+                resizeType:1,
+                allowPreviewEmoticons : false,
+                allowImageRemote : false,
+                uploadJson : '/upload_image',
+
+            });
+        })
+    </script>
+
+</head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="30" background="../../static/tab/images/tab_05.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="12" height="30"><img src="../../static/tab/images/tab_03.gif" width="12" height="30" /></td>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="46%" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="5%"><div align="center"><img src="../../static/tab/images/tb.gif" width="16" height="16" /></div></td>
+                <td width="95%" class="STYLE1"><span class="STYLE3">你当前的位置</span>：[学生信息修改]</td>
+              </tr>
+            </table></td>
+            <td width="54%">&nbsp;</td>
+          </tr>
+        </table></td>
+        <td width="16"><img src="../../static/tab/images/tab_07.gif" width="16" height="30" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="8" background="../../static/tab/images/tab_12.gif">&nbsp;</td>
+        <td height="300" valign="top">
+
+
+
+
+
+
+
+<form method="post" name="form1" action="">
+<table width="99%" border="0" cellspacing="1" cellpadding="5" align="center" bgcolor="#F2F2F2">
+      <tr>
+        <td bgcolor="#FFFFFF" align="center">所属班级</td>
+        <td bgcolor="#FFFFFF" colspan="2">
+            <select name="banji_id">
+                {% for fenzu in fenzus %}
+                <option  value="{{ fenzu.0 }}"
+                    {% if fenzu.0 == fzid %}
+                        selected
+                    {% endif %}
+                >
+                    {{ fenzu.0 }} --- {{ fenzu.1 }}
+                </option>
+                {% endfor %}
+            </select>
+
+         学号：<input type="text" name="xuehao"  size="20" value="{{ info.3 }}" >
+        </td>
+      </tr>
+
+      <tr>
+        <td bgcolor="#FFFFFF" width="15%" align="center">学生信息</td>
+        <td bgcolor="#FFFFFF" width="85%" colspan="2">
+            姓名： <input type="text" name="xingming" size="5"  value="{{ info.4 }}">
+            性别：
+            <select name="xingbie">
+                <option value="男"
+                    {% if info.5 == "男" %}
+                        selected
+                    {% endif %}
+                >男</option>
+                <option value="女"
+                    {% if info.5 == "女" %}
+                        selected
+                    {% endif %}
+                >女</option>
+            </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td bgcolor="#FFFFFF" width="15%" align="center">账号信息</td>
+        <td bgcolor="#FFFFFF" width="85%" colspan="2">
+            身份证： <input type="text" name="sfz" size="30" value="{{ info.6 }}" >
+            密码： <input type="text" name="mima"  size="10" value="{{ info.7 }}" >
+        </td>
+      </tr>
+
+      <tr>
+        <td bgcolor="#FFFFFF" width="15%" align="center">联系方式</td>
+        <td bgcolor="#FFFFFF" width="85%" colspan="2">
+          邮箱：<input type="text" name="youxiang" size="20" value="{{ info.8 }}">&nbsp;&nbsp;&nbsp;&nbsp;
+          QQ：<input type="text" name="qq" size="20" value="{{ info.9 }}">&nbsp;&nbsp;&nbsp;&nbsp;
+          微信：<input type="text" name="weixin" size="20" value="{{ info.10 }}">
+        </td>
+      </tr>
+
+      <tr>
+        <td bgcolor="#FFFFFF" width="15%" align="center">寝室安排</td>
+        <td bgcolor="#FFFFFF" width="85%" colspan="2">
+            <script>
+            function select_Dialog(){
+                var height = 200;
+                var width = 400;
+                var url = "sushe_xuanze";
+                var winOption = "height=" + height + ",width=" + width + ",top=300,left=300,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,fullscreen=0";
+                window.open(url, window, winOption);
+            }
+            function qingchu(){
+                 //alert(xuhao + " | " + jiaoshi_id+ " | " + kecheng_xuhao);
+                 document.getElementById("sushe_id").value="";
+                 document.getElementById("sushe_mc").value="";
+            }
+            </script>
+            <iframe width="0" height="0" frameborder="0" name="frame01" src=""></iframe>
+
+            <input type="text" name="sushe_id" style="width:100px;" id="sushe_id" value="{{ info.11 }}"/>
+            <input type="text" name="sushe_mc" id="sushe_mc"  value="{{ info.12 }}"/>
+            <input type="button" onclick="select_Dialog()" value="选择" />
+            <input type="button" onclick="qingchu()" value="清除" />
+
+        </td>
+      </tr>
+
+  <tr  >
+    <td bgcolor="#FFFFFF" align="center">学生简介</td>
+    <td colspan="2" bgcolor="#FFFFFF"><textarea name="jianjie" rows="2" cols="70">{{ info.13 }}</textarea></td>
+  </tr>
+
+  <tr  >
+    <td width="15%" bgcolor="#FFFFFF" align="center">学生头像</td>
+    <td width="35%" bgcolor="#FFFFFF">
+    	<input type="text" name="touxiang" size="50" value="{{ info.14 }}">
+	</td>
+    <td width="50%" bgcolor="#FFFFFF">
+    	<iframe frameborder="0" src="/upload01?domid=touxiang" width="100%" height="25"></iframe>
+    </td>
+  </tr>
+
+
+  <tr >
+    <td bgcolor="#FFFFFF" align="center">学生介绍</td>
+    <td colspan="2" bgcolor="#FFFFFF">
+         <textarea id="xinxi_neirong" name="xinxi_neirong" style="height: 300px; width: 800px;" >{{ info.15 }}</textarea>
+    </td>
+  </tr>
+
+      <tr>
+        <td bgcolor="#FFFFFF">&nbsp;</td>
+        <td bgcolor="#FFFFFF" colspan="2">
+            <input type="hidden" name="id" value="{{ info.0 }}" />
+            <input type="hidden" name="dijiye" value="{{ dijiye }}" />
+            <input type="submit" value=" 修改内容 " >
+        </td>
+      </tr>
+</table>
+</form>
+
+
+
+
+
+
+
+        
+        
+        </td>
+        <td width="8" background="../../static/tab/images/tab_15.gif">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="35" background="../../static/tab/images/tab_19.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="12" height="35"><img src="../../static/tab/images/tab_18.gif" width="12" height="35" /></td>
+        <td></td>
+        <td width="16"><img src="../../static/tab/images/tab_20.gif" width="16" height="35" /></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>
